@@ -1,0 +1,2 @@
+include 'frontend', 'backend', 'common'
+rootProject.name = 'SimpleAddressBook'
