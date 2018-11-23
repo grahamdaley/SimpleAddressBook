@@ -13,7 +13,7 @@ class App : KVServer({
             morphia.mapper.converters.addConverter(ObjectIdConverter::class.java)
         })
 
-    AddressServiceManager.applyRoutes(this)
+    ContactServiceManager.applyRoutes(this)
 })
 
 fun main(args: Array<String>) {

@@ -8,7 +8,7 @@ import org.mongodb.morphia.annotations.Id
 
 @Entity
 @Serializable
-actual data class Address(
+actual data class Contact(
     @Id
     @JsonSerialize(using = ObjectIdSerializer::class)
     val id: ObjectId? = null,

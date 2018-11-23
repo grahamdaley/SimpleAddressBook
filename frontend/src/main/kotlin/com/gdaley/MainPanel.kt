@@ -2,7 +2,6 @@ package com.gdaley
 
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import pl.treksoft.kvision.core.FontStyle
 import pl.treksoft.kvision.data.DataContainer.Companion.dataContainer
 import pl.treksoft.kvision.form.FormPanel
 import pl.treksoft.kvision.form.FormPanel.Companion.formPanel
@@ -11,10 +10,8 @@ import pl.treksoft.kvision.form.text.TextInputType
 import pl.treksoft.kvision.html.Button
 import pl.treksoft.kvision.html.Button.Companion.button
 import pl.treksoft.kvision.html.Icon.Companion.icon
-import pl.treksoft.kvision.html.Link.Companion.link
 import pl.treksoft.kvision.modal.Confirm
 import pl.treksoft.kvision.modal.Modal
-import pl.treksoft.kvision.panel.SimplePanel
 import pl.treksoft.kvision.panel.VPanel
 import pl.treksoft.kvision.table.Cell.Companion.cell
 import pl.treksoft.kvision.table.HeaderCell
@@ -25,7 +22,7 @@ import pl.treksoft.kvision.utils.px
 
 object MainPanel : VPanel() {
 
-    private lateinit var addForm: FormPanel<Address>
+    private lateinit var addForm: FormPanel<Contact>
     private val modal: Modal
     private var editingIndex = -1
 
@@ -39,7 +36,7 @@ object MainPanel : VPanel() {
         }
 
         dataContainer(
-            Model.addresses, { index, address ->
+            Model.contacts, { index, address ->
                 Row {
                     cell(address.name)
                     cell(address.email)
@@ -65,11 +62,11 @@ object MainPanel : VPanel() {
             }, container = table
         )
 
-        modal = Modal("Add/Edit Address")
+        modal = Modal("Add/Edit Contact")
         modal.add(VPanel {
             addForm = formPanel {
-                add(Address::name, Text(label = "Name:").apply { maxlength = 255 })
-                add(Address::email,
+                add(Contact::name, Text(label = "Name:").apply { maxlength = 255 })
+                add(Contact::email,
                     Text(TextInputType.EMAIL, label = "Email:").apply { maxlength = 255 }) {
                     it.getValue()
                         ?.matches("[\\w-]+@([\\w-]+\\.)+[\\w-]+")
@@ -84,31 +81,31 @@ object MainPanel : VPanel() {
             save()
         })
 
-        button(text = "Add Address").onClick {
+        button(text = "Add Contact").onClick {
             newAddress()
         }
 
     }
 
     private fun newAddress() {
-        addForm.setData(Address())
+        addForm.setData(Contact())
         editingIndex = -1
         modal.show()
     }
 
     private fun save() {
         if (addForm.validate()) {
-            val id = if (editingIndex >= 0) Model.addresses[editingIndex].id else null
+            val id = if (editingIndex >= 0) Model.contacts[editingIndex].id else null
             val address = addForm.getData().copy(id = id)
             GlobalScope.launch {
-                Model.saveAddress(address)
+                Model.saveContact(address)
             }
             modal.hide()
         }
     }
 
     private fun edit(index: Int) {
-        val address = Model.addresses[index]
+        val address = Model.contacts[index]
         addForm.setData(address)
         editingIndex = index
         modal.show()
@@ -116,8 +113,8 @@ object MainPanel : VPanel() {
 
     private fun delete(index: Int) {
         GlobalScope.launch {
-            Model.addresses[index].id?.let {
-                Model.deleteAddress(it)
+            Model.contacts[index].id?.let {
+                Model.deleteContact(it)
             }
         }
     }

@@ -4,8 +4,6 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import pl.treksoft.kvision.hmr.ApplicationBase
 import pl.treksoft.kvision.panel.Root
-import pl.treksoft.kvision.panel.SplitPanel.Companion.splitPanel
-import pl.treksoft.kvision.utils.vh
 
 object App : ApplicationBase {
 
@@ -18,7 +16,7 @@ object App : ApplicationBase {
         }
 
         GlobalScope.launch {
-            Model.getAddressList()
+            Model.getContactList()
         }
     }
 

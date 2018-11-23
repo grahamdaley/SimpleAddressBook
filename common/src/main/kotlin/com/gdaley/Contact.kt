@@ -1,3 +1,3 @@
 package com.gdaley
 
-expect class Address
+expect class Contact
