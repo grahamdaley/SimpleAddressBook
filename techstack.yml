@@ -1,0 +1,127 @@
+repo_name: grahamdaley/SimpleAddressBook
+report_id: 98c05833658b9cb4400a696ba02b4736
+version: 0.1
+repo_type: Public
+timestamp: '2024-01-12T01:21:41+00:00'
+requested_by: grahamdaley
+provider: github
+branch: master
+detected_tools_count: 10
+tools:
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/grahamdaley/SimpleAddressBook
+  detection_source: Repo Metadata
+- name: Kotlin
+  description: Statically typed Programming Language targeting JVM and JavaScript
+  website_url: https://kotlinlang.org/
+  open_source: true
+  hosted_saas: true
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/3750/pCfEzr6L.png
+  detection_source_url: https://github.com/grahamdaley/SimpleAddressBook
+  detection_source: Repo Metadata
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/grahamdaley/SimpleAddressBook
+  detection_source: Repo Metadata
+- name: Gradle
+  description: A powerful build system for the JVM
+  website_url: https://www.gradle.org/
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Java Build Tools
+  image_url: https://img.stackshare.io/service/975/gradlephant-social-black-bg.png
+  detection_source_url: https://github.com/grahamdaley/SimpleAddressBook/blob/master/backend/build.gradle
+  detection_source: backend/build.gradle
+  last_updated_by: gdaley
+  last_updated_on: 2018-11-22 13:50:44.000000000 Z
+- name: Logback
+  description: A logging framework for Java applications
+  website_url: https://logback.qos.ch/
+  open_source: false
+  hosted_saas: false
+  category: Monitoring
+  sub_category: Log Management
+  image_url: https://img.stackshare.io/service/2923/05518ecaa42841e834421e9d6987b04f_400x400.png
+  detection_source_url: https://github.com/grahamdaley/SimpleAddressBook/blob/master/backend/conf/logback.xml
+  detection_source: backend/conf/logback.xml
+  last_updated_by: gdaley
+  last_updated_on: 2018-11-22 13:50:44.000000000 Z
+- name: commons-logging:commons-logging
+  description: Apache Commons Logging is a thin adapter allowing configurable bridging
+    to other
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/grahamdaley/SimpleAddressBook/blob/master/backend/build.gradle
+  detection_source: backend/build.gradle
+  last_updated_by: gdaley
+  last_updated_on: 2018-11-22 13:50:44.000000000 Z
+- name: org.jetbrains.kotlin:kotlin-reflect
+  description: Kotlin Full Reflection Library
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/grahamdaley/SimpleAddressBook/blob/master/backend/build.gradle
+  detection_source: backend/build.gradle
+  last_updated_by: gdaley
+  last_updated_on: 2018-11-22 13:50:44.000000000 Z
+- name: org.jetbrains.kotlin:kotlin-stdlib-common
+  description: Kotlin Common Standard Library
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/grahamdaley/SimpleAddressBook/blob/master/common/build.gradle
+  detection_source: common/build.gradle
+  last_updated_by: gdaley
+  last_updated_on: 2018-11-22 13:50:44.000000000 Z
+- name: org.jetbrains.kotlin:kotlin-stdlib-jdk8
+  description: Kotlin Standard Library JDK 8 extension
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/grahamdaley/SimpleAddressBook/blob/master/backend/build.gradle
+  detection_source: backend/build.gradle
+  last_updated_by: gdaley
+  last_updated_on: 2018-11-22 13:50:44.000000000 Z
+- name: org.jetbrains.kotlin:kotlin-stdlib-js
+  description: Kotlin Standard Library for JS
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/grahamdaley/SimpleAddressBook/blob/master/frontend/build.gradle
+  detection_source: frontend/build.gradle
+  last_updated_by: gdaley
+  last_updated_on: 2018-11-22 13:50:44.000000000 Z
